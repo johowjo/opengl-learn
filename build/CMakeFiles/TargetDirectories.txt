@@ -1,0 +1,3 @@
+/Users/howardliao/glad/build/CMakeFiles/app.dir
+/Users/howardliao/glad/build/CMakeFiles/edit_cache.dir
+/Users/howardliao/glad/build/CMakeFiles/rebuild_cache.dir

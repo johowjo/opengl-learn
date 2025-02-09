@@ -1,0 +1,30 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Iinclude",
+      "-I/opt/homebrew/Cellar/glfw/3.4/include",
+      "-o",
+      "build/main.o",
+      "src/main.c"
+    ],
+    "directory": "/Users/howardliao/glad",
+    "file": "/Users/howardliao/glad/src/main.c",
+    "output": "/Users/howardliao/glad/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Iinclude",
+      "-I/opt/homebrew/Cellar/glfw/3.4/include",
+      "-o",
+      "build/glad.o",
+      "src/glad.c"
+    ],
+    "directory": "/Users/howardliao/glad",
+    "file": "/Users/howardliao/glad/src/glad.c",
+    "output": "/Users/howardliao/glad/build/glad.o"
+  }
+]
