@@ -4,27 +4,32 @@
       "/usr/bin/gcc",
       "-c",
       "-Iinclude",
-      "-I/opt/homebrew/Cellar/glfw/3.4/include",
       "-o",
-      "build/main.o",
-      "src/main.c"
+      "src/glad.o",
+      "src/glad.c"
     ],
-    "directory": "/Users/howardliao/glad",
-    "file": "/Users/howardliao/glad/src/main.c",
-    "output": "/Users/howardliao/glad/build/main.o"
+    "directory": "/Users/howardliao/opengl-learn/lib/glad",
+    "file": "/Users/howardliao/opengl-learn/lib/glad/src/glad.c",
+    "output": "/Users/howardliao/opengl-learn/lib/glad/src/glad.o"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
       "-c",
-      "-Iinclude",
-      "-I/opt/homebrew/Cellar/glfw/3.4/include",
+      "-Ilib/glfw/include",
+      "-Ilib/glad/include",
+      "-framework",
+      "Cocoa",
+      "-framework",
+      "OpenGL",
+      "-framework",
+      "IOKit",
       "-o",
-      "build/glad.o",
-      "src/glad.c"
+      "src/main.o",
+      "src/main.c"
     ],
-    "directory": "/Users/howardliao/glad",
-    "file": "/Users/howardliao/glad/src/glad.c",
-    "output": "/Users/howardliao/glad/build/glad.o"
+    "directory": "/Users/howardliao/opengl-learn",
+    "file": "/Users/howardliao/opengl-learn/src/main.c",
+    "output": "/Users/howardliao/opengl-learn/src/main.o"
   }
 ]

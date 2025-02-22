@@ -2,8 +2,8 @@ CC = gcc
 BIN = bin
 SRC = $(wildcard src/*.c)
 OBJ = $(SRC:.c=.o)
-FLAGS = -Ilib/glfw/include -Ilib/glad/include -Llib/glfw/build/src -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit
-LFLAGS = lib/glad/src/glad.o
+IFLAGS = -Ilib/glfw/include -Ilib/glad/include 
+LFLAGS = -Llib/glfw/build/src -Llib/glad/src/ -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit
 
 all: libs game
 
@@ -11,11 +11,11 @@ libs:
 	cd lib/glfw/build && make
 	cd lib/glad/ && $(CC) -o src/glad.o -c src/glad.c -Iinclude
 
-game: $(OBJ)
-	$(CC) -o $(BIN)/app $^ $(LFLAGS) $(FLAGS)
+src/main.o: src/main.c
+	$(CC) -o src/main.o -c src/main.c $(IFLAGS)
 
-%.o: %.c
-	$(CC) -o $@ -c $^ $(FLAGS)
+game: $(OBJ)
+	$(CC) -o $(BIN)/app $^ lib/glad/src/glad.o $(LFLAGS)
 
 clean:
 	rm -f src/*.o bin/*
