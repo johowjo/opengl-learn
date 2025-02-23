@@ -1,3 +1,4 @@
 .cache/
 .clang-format
 lib/
+src/*.o
