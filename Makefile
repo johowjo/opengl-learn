@@ -14,6 +14,9 @@ libs:
 src/main.o: src/main.c
 	$(CC) -o src/main.o -c src/main.c $(IFLAGS)
 
+src/shader.o: src/shader.c
+	$(CC) -o src/shader.o -c src/shader.c $(IFLAGS)
+
 game: $(OBJ)
 	$(CC) -o $(BIN)/app $^ lib/glad/src/glad.o $(LFLAGS)
 
